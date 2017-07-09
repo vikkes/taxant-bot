@@ -3,10 +3,27 @@
 
 <!-- sample-content included for demo purposes only -->
 <link rel="import" href="../bower_components/app-layout/demo/sample-content.html">
+
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+
 <dom-module id="my-content">
+    <!-- inside an element -- include the module you need in a standard style element -->
+  <style include="iron-flex"></style>
+  <style>
+    .container {
+      @apply(--layout-horizontal);
+    }
+  </style>
     <template>
         
-    <sample-content size="10"></sample-content>
+    <!--<sample-content size="10"></sample-content>-->
+    <!---->
+    <div class="container">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
     </template>
      <script>
         /**

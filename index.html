@@ -12,15 +12,15 @@
   <link rel="manifest" href="/manifest.json">
   
 
-  <script src="../bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+  <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
 
   <link rel="import" href="src/my-header.html">
   <link rel="import" href="src/my-content.html">
   
-  <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+  <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout-classes.html">
   
    <!-- main document -- include the module you need in a custom-style element -->
-  <style is="custom-style" include="iron-flex iron-flex-alignment iron-positioning"></style>
+  <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
 
 </head>
 
@@ -28,19 +28,33 @@
 
 body{
   margin: 0;
+  height: 100vh;
+  border: 2px solid green;
 }
-.container {
-      @apply(--layout-vertical);
-      border: 2px solid red;
-    }
+.content{
+   border: 2px solid yellow;
+}
+.form{
+  border: 2px solid red;
+}
+.chat{
+  border: 2px solid black;
+}
 </style>
 
 <body class="fullbleed">
-  <div  class="container ">
-    <div style="hight: 200px">
+  <div>
+    <div class="vertical layout">
       <my-header ></my-header>
     </div>
-    <div style="hight: 80%">
+    <my-content></my-content>
+    <div class="content horizontal layout">
+      <div class="flex form ">
+        a
+      </div>
+      <div class="flex chat ">
+        b
+      </div>
     </div>
   
   </div>
